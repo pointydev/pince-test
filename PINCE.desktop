@@ -1,0 +1,18 @@
+[Desktop Entry]
+Categories=Qt;Utility;Development;
+Comment[en_GB]=Reverse engineering tool for Linux games
+Comment=Reverse engineering tool for Linux games
+Exec=pince %U
+GenericName[en_GB]=PINCE
+GenericName=PINCE
+Icon=PINCE
+MimeType=
+Name[en_GB]=PINCE
+Name=PINCE
+Path=
+StartupNotify=false
+Terminal=true
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
