@@ -4,7 +4,6 @@ Name:           pince
 Version:        0.4.4
 Release:        1%{?dist}
 Summary:        Reverse engineering tool for Linux games
-BuildArch:      x86_64
 
 License:        GPL-3.0-or-later OR CC-BY-3.0
 URL:            https://github.com/korcankaraokcu/PINCE
