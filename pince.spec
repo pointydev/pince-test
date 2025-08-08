@@ -4,6 +4,7 @@ Name:           pince
 Version:        0.4.4
 Release:        0%{?dist}
 Summary:        Reverse engineering tool for Linux games
+BuildArch:      x86_64
 
 License:        GPL-3.0-or-later OR CC-BY-3.0
 URL:            https://github.com/korcankaraokcu/PINCE
@@ -44,11 +45,8 @@ tar -xzf %{SOURCE1}
 mkdir -p libpince/libptrscan
 tar -xzf %{SOURCE2} -C libpince/libptrscan --strip-components 1
 
-# Remove venv checks and add cd to install dir for PINCE.sh
-sed -e '2i cd %{_datadir}/PINCE' \
-    -e '/^if \[ ! -d .*.venv.* \]; /,/venv.*activate$/ s/^/# /' \
-    -e 's|[^ ]*python3|python3|' \
-    -i PINCE.sh
+# Replace the script's directory and venv logic with the full execution command.
+sed -i "/^SCRIPTDIR=/,/activate$/c\sudo -E --preserve-env=PATH PYTHONDONTWRITEBYTECODE=1 python3 %{_datadir}/PINCE/PINCE.py \\\"\\$@\\\" && exit" PINCE.sh
 
 %build
 %cmake -S libscanmem-PINCE-%{libscanmem_commit} -B build-libscanmem -DCMAKE_BUILD_TYPE=Release
