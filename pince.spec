@@ -17,6 +17,7 @@ BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
+BuildRequires:  gtk-update-icon-cache
 BuildRequires:  pkgconf
 BuildRequires:  python3-devel
 BuildRequires:  qt6-linguist
@@ -74,6 +75,9 @@ install -d %{buildroot}%{_datadir}/icons/hicolor/256x256/apps
 install -m644 media/logo/ozgurozbek/pince_small_transparent.png %{buildroot}%{_datadir}/icons/hicolor/256x256/apps/pince.png
 install -d %{buildroot}%{_datadir}/applications
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications %{SOURCE3}
+
+%post
+gtk-update-icon-cache -ftq %{_datadir}/icons/hicolor
 
 %files
 %license COPYING COPYING.CC-BY
