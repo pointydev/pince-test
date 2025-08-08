@@ -22,10 +22,10 @@ BuildRequires:  qt6-linguist
 BuildRequires:  sed
 
 Requires:       gdb
+Requires:       python-keystone-engine
 Requires:       python3-capstone
 Requires:       python3-gobject
-Requires:       python-keyboard
-# Requires:       python-keystone-engine
+Requires:       python3-keyboard
 Requires:       python3-pexpect
 Requires:       python3-pygdbmi
 Requires:       python3-pyqt6
@@ -44,8 +44,9 @@ tar -xzf %{SOURCE1}
 mkdir -p libpince/libptrscan
 tar -xzf %{SOURCE2} -C libpince/libptrscan --strip-components 1
 
-# Remove venv checks from PINCE.sh as we are using system python packages
-sed -e '/^if \[ ! -d .*.venv.* \]; /,/venv.*activate$/ s/^/# /' \
+# Remove venv checks and add cd to install dir for PINCE.sh
+sed -e '1i cd %{_datadir}/PINCE' \
+    -e '/^if \[ ! -d .*.venv.* \]; /,/venv.*activate$/ s/^/# /' \
     -e 's|[^ ]*python3|python3|' \
     -i PINCE.sh
 
