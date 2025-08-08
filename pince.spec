@@ -2,7 +2,7 @@
 
 Name:           pince
 Version:        0.4.4
-Release:        1%{?dist}
+Release:        0%{?dist}
 Summary:        Reverse engineering tool for Linux games
 
 License:        GPL-3.0-or-later OR CC-BY-3.0
@@ -25,7 +25,7 @@ Requires:       gdb
 Requires:       python3-capstone
 Requires:       python3-gobject
 Requires:       python-keyboard
-Requires:       python-keystone-engine
+# Requires:       python-keystone-engine
 Requires:       python3-pexpect
 Requires:       python3-pygdbmi
 Requires:       python3-pyqt6
