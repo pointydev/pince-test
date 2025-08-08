@@ -72,7 +72,7 @@ ln -s %{_datadir}/PINCE/PINCE.sh %{buildroot}%{_bindir}/pince
 ln -s %{_datadir}/PINCE/PINCE.sh %{buildroot}%{_bindir}/PINCE
 
 install -d %{buildroot}%{_datadir}/icons/hicolor/256x256/apps
-install -m644 media/logo/default.png %{buildroot}%{_datadir}/icons/hicolor/256x256/apps/pince.png
+install -m644 media/logo/ozgurozbek/pince_small_transparent.png %{buildroot}%{_datadir}/icons/hicolor/256x256/apps/pince.png
 install -d %{buildroot}%{_datadir}/applications
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications %{SOURCE3}
 
