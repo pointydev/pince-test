@@ -15,6 +15,7 @@ Source3:        PINCE.desktop
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
 BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  pkgconf
 BuildRequires:  python3-devel
 BuildRequires:  qt6-linguist
