@@ -45,7 +45,7 @@ mkdir -p libpince/libptrscan
 tar -xzf %{SOURCE2} -C libpince/libptrscan --strip-components 1
 
 # Remove venv checks and add cd to install dir for PINCE.sh
-sed -e '1i cd %{_datadir}/PINCE' \
+sed -e '2i cd %{_datadir}/PINCE' \
     -e '/^if \[ ! -d .*.venv.* \]; /,/venv.*activate$/ s/^/# /' \
     -e 's|[^ ]*python3|python3|' \
     -i PINCE.sh
