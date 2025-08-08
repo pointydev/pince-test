@@ -16,7 +16,6 @@ BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
-BuildRequires:  gtk-update-icon-cache
 BuildRequires:  pkgconf
 BuildRequires:  python3-devel
 BuildRequires:  qt6-linguist
@@ -32,6 +31,8 @@ Requires:       python3-pygdbmi
 Requires:       python3-pyqt6
 
 Recommends:     qt6-qtwayland
+
+Requires(post): gtk-update-icon-cache
 
 %description
 PINCE is a front-end/reverse engineering tool for the GNU Project
