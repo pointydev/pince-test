@@ -24,8 +24,8 @@ BuildRequires:  sed
 Requires:       gdb
 Requires:       python3-capstone
 Requires:       python3-gobject
-Requires:       python3-keyboard
-Requires:       python3-keystone-engine
+Requires:       python-keyboard
+Requires:       python-keystone-engine
 Requires:       python3-pexpect
 Requires:       python3-pygdbmi
 Requires:       python3-pyqt6
