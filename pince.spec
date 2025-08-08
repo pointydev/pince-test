@@ -28,7 +28,7 @@ Requires:       python3-keyboard
 Requires:       python3-keystone-engine
 Requires:       python3-pexpect
 Requires:       python3-pygdbmi
-Requires:       python3-pyqt6-qt6
+Requires:       python3-pyqt6
 
 Recommends:     qt6-qtwayland
 
